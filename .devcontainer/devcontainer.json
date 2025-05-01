@@ -1,0 +1,23 @@
+{
+  "name": "Chat Copilot Dev",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/yarn:1": {}
+  },
+  "postCreateCommand": "cd frontend && yarn install && cd ../webapi && dotnet restore",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 5120],
+  "remoteUser": "vscode"
+}
