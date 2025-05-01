@@ -6,7 +6,9 @@
       "version": "20"
     }
   },
-  "postCreateCommand": "npm install -g yarn && cd frontend && yarn install && cd ../webapi && dotnet restore && bash .devcontainer/install-azcli.sh",
+  // "postCreateCommand": "npm install -g yarn && cd frontend && yarn install && cd ../webapi && dotnet restore && bash .devcontainer/install-azcli.sh",
+  "postCreateCommand": ".devcontainer/install-azcli.sh && npm install -g yarn && cd frontend && yarn install && cd ../webapi && dotnet restore",
+
   "customizations": {
     "vscode": {
       "extensions": [

@@ -57,4 +57,5 @@
   "debug.internalConsoleOptions": "neverOpen",
   "azureFunctions.projectSubpath": "plugins/web-searcher",
   "azureFunctions.preDeployTask": "publish (functions)",
+  "dotnet.server.useModernNet": false
 }
