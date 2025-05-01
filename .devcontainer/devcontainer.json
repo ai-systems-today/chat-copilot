@@ -6,7 +6,7 @@
       "version": "20"
     }
   },
-  "postCreateCommand": "npm install -g yarn && cd frontend && yarn install && cd ../webapi && dotnet restore",
+  "postCreateCommand": "npm install -g yarn && cd frontend && yarn install && cd ../webapi && dotnet restore && bash .devcontainer/install-azcli.sh",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,9 +17,6 @@
       ]
     }
   },
-  "forwardPorts": [
-    3000,
-    5120
-  ],
+  "forwardPorts": [3000, 5120],
   "remoteUser": "vscode"
 }
